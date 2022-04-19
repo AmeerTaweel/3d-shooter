@@ -1,0 +1,10 @@
+# Unity3D Generated
+Library
+Logs
+Temp
+UserSettings
+
+# Others
+*.sln
+*.csproj
+Builds
