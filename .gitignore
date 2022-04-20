@@ -4,7 +4,13 @@ Logs
 Temp
 UserSettings
 
-# Others
+# IDE
 *.sln
 *.csproj
+.idea
+3d-shooter.sln.DotSettings.user
+
+# Others
 Builds
+.direnv
+obj
