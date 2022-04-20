@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         SetupInputManager();
     }
 
-    private void SetupCharacterController()
+    void SetupCharacterController()
     {
         controller = GetComponent<CharacterController>();
         if (controller == null)
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void SetupInputManager()
+    void SetupInputManager()
     {
         inputmanager = InputManager.instance;
     }
