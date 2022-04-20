@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
     [Tooltip("The player shooter script that fires projectiles")]
     public Shooter playerShooter;
 
+    // The character controller component on the player
+    private CharacterController controller;
+    private InputManager inputmanager;
+
     /// <summary>
     /// Description:
     /// Standard Unity function called once before the first Update call
@@ -30,7 +34,22 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Start()
     {
+        SetupCharacterController();
+        SetupInputManager();
+    }
 
+    private void SetupCharacterController()
+    {
+        controller = GetComponent<CharacterController>();
+        if (controller == null)
+        {
+            Debug.LogError("CharacterController component not found on player.");
+        }
+    }
+
+    private void SetupInputManager()
+    {
+        inputmanager = InputManager.instance;
     }
 
     /// <summary>
